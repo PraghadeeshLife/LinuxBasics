@@ -17,6 +17,7 @@ So, basically here are some point on the system call
 
 Here are some of the common system calls used and their unique numbers assigned for the x86 architecture, these can be found listed at the following path /usr/include/asm/unistd.h. The system call number varies with respect to architecture.
 
+```
 #define __NR_exit                 1
 #define __NR_fork                 2
 #define __NR_read                 3
@@ -33,10 +34,11 @@ Here are some of the common system calls used and their unique numbers assigned 
 #define __NR_mknod               14
 #define __NR_chmod               15
 #define __NR_lchown              16
+```
 
 Let's explore the behind the scenes actions that takes place when an application invokes a system call
 1. When an user space function invokes a System call, the wrapper library function for the system call is called.
-2. The wrapper function must make available all the arguments passed to the system call to be used by the trap and handler routine=. The arguments are passed to the wrapper function through stack but since kernel expects them in specific registers, these arguments are copied to specific register in which the Kernel can access them.
+2. The wrapper function must make available all the arguments passed to the system call to be used by the trap and handler routine. The arguments are passed to the wrapper function through stack but since kernel expects them in specific registers, these arguments are copied to specific register in which the Kernel can access them.
 3. All the system calls enter the kernel in the same way, so in order to identify the system call they are identified by the system call number which is copied to the register %eax ans will be used by the kernel.
 4. Once the system call number is copied to the kernel, the wrapper function then executes a trap machine instruction int 0x80 which causes the processor to enter the kernel realm. 
 5. Following the trap instruction, the kernel executes a software interrupt handler which is the system call handler located at arch/i386/entry.S to handle the trap. The handler then goes through the following flow.
