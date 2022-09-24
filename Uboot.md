@@ -34,4 +34,4 @@ We will be using TI's AM3358 SoC (BeagleBone Black Rev C) for the demonstration 
 
 Click to access the AM335x's Technical Reference Manual https://www.ti.com/lit/ug/spruh73q/spruh73q.pdf
 Click here to see the Pin out and header of BeagleBone, the Mode 1 represents the default operation of that specific pin and other modes describe in which they can be modified as per the use case.
-
+Click here to see AM335X's specification document https://www.ti.com/lit/ds/symlink/am3358.pdf?ts=1664016445630&ref_url=https%253A%252F%252Fwww.google.com%252F
