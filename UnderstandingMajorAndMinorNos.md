@@ -13,6 +13,8 @@ like a normal file
 In the above screenshot, we will also be able to notice that there are two numbers that are seperated by comma present before the data, those numbers are called
 as the major number and minor number in the given order.
 
+![image](https://user-images.githubusercontent.com/102030901/192813516-c7996ab4-e706-4a9e-bc07-50d8edd13fd7.png)
+
 The major number is used to identify a driver associated with it whereas a minor number is used by the driver to distinguish multiple devices associated with it,
 it is not used by Kernel. Let's say we have a hard disk with four partitions present in it. Now the harddisk will have a Major number that is associated to the 
 driver that is handling the hard disk and all the four different partitions are identified with minor numbers which will be used by the driver to distinguish.
@@ -22,4 +24,10 @@ Again as you can see in the above screenshot attached earlier, we can observer a
 
 The below is an flowchart of how the device drivers and application communicate, so to reigister our device under /dev directory it is important for us to
 use major number and minor numbers.
+
+If we need to create a special or device file, we have to be aware of major and minor numbers to register the devices as files under /dev directory
+
+This can be done in two ways
+1. Static Allocation
+2. Dynamic Allocation
 
