@@ -31,3 +31,7 @@ This can be done in two ways
 1. Static Allocation
 2. Dynamic Allocation
 
+![image](https://user-images.githubusercontent.com/102030901/192816571-560991db-d8d5-497f-ae58-67ffe74ce9da.png)
+
+![image](https://user-images.githubusercontent.com/102030901/192816804-f8f924ca-5b05-45a0-b580-aa3d34802e1a.png)
+
